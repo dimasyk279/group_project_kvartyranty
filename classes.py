@@ -1,24 +1,25 @@
 class Station:
-    def __init__(self, name, bikes):
+    def __init__(self, name):
         self.name = name
-        self.bikes = bikes
-    def take_bike(self, number):
-        pass
+        self.bikes = []
     def add_bike(self, bike):
-        pass
+        self.bikes.append(bike)
     def bike_count(self):
-        pass
+        return len(self.bikes)
+    def remove_bike(self, number):
+        for bike in self.bikes:
+            if bike.number == number:
+                self.bikes.remove(bike)
+                return bike
+        return None
 
 class Client:
-    def __init__(self, name, balance, bike):
+    def __init__(self, name, balance):
         self.name = name
         self.balance = balance
-    def ride(self, minutes):
-        pass
-    def return_bike(self, station, minutes):
-        pass
+        self.bike = None
     def pay(self, amount):
-        pass
+        self.balance -= amount
 
 
 class Bike:
@@ -26,5 +27,3 @@ class Bike:
         self.number = number
         self.is_electric = is_electric
         self.price_per_minute = price_per_minute if not is_electric else 5
-    def cost(self, minutes):
-        pass
