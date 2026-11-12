@@ -43,3 +43,18 @@
 | 12 | Бачити | `Station` | `Station.bike_count()` |
 | 13 | Заробила | `Station` | `total_earned(...)` |
 
+
+## Етап 2 картки класів
+
+| Клас | Атрибути | Методи |
+|---|---|---|
+| `Bike` | `number`, `is_electric`, `price_per_minute` | `cost(minutes)` |
+| `Station` | `name`, `bikes` | `add_bike`, `take_bike`, `bike_count` |
+| `Client` | `name`, `balance`, `bike` (велосипед, на якому він зараз) | `ride(minutes)`, `return_bike`, `pay(amount)` |
+
+### Окремі функції
+
+| Функція | Призначення |
+|---|---|
+| `total_earned()` | скільки заробила мережа |
+| `print_report(stations)` | для адміністратора |
